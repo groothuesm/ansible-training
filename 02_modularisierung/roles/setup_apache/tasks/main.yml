@@ -12,13 +12,7 @@
     training_apache_packages:
       - apache2
       - apache2-utils
-#  notify: check_apache_status
-
-- name: check_apache_status
-  service:
-    name: apache2
-    state: started
-  register: res_service_status
+  notify: check_apache_status
 
 - name: show variable tasks
   debug:
