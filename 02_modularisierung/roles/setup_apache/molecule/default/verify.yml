@@ -7,6 +7,6 @@
   - name: Example assertion
     assert:
       that: true
-  - name: real assertion
-    import_role:
-      name: roles/test_setup_apache
+#  - name: real assertion
+#    import_role:
+#      name: roles/test_setup_apache
