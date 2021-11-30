@@ -35,7 +35,7 @@
   tasks:
     - name: test apache
       uri:
-        url: http://ghilling.training.hilling.de
+        url: http://mgroothues.training.hilling.de
       register: apache_uri_result
     - name: show variable
       debug:
