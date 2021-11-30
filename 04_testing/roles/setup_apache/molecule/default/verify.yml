@@ -7,3 +7,5 @@
   - name: Example assertion
     assert:
       that: true
+      success_msg: That-was-successfull
+      fail_msg: You-failed
