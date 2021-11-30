@@ -2,7 +2,7 @@
 - name: check_apache_status
   service:
     name: apache2
-    state: restarted
+    state: started
   register: res_service_status
 
 - name: show apache status
