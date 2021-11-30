@@ -15,10 +15,8 @@
         var: training_apache_packages
 
   roles:
-
-  tasks:
-    - name: install apache (play)
-      import_tasks: install_apache.yml
+    - name: install apache
+      import_role: roles/setup_apache
 
 
   post_tasks:
