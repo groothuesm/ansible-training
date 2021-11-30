@@ -1,8 +1,10 @@
 ---
 - name: check_apache_status
-  service:
-    command: systemctl status apache2
-    register: res_service_status
+  systemd:
+    name: apache2
+    daemon_reload: yes
+    state: restarted
+  register: res_service_status
 
 - name: show apache status
   debug:
