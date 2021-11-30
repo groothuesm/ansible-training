@@ -18,6 +18,7 @@
     - name: role install apache
       import_role:
         name: roles/setup_apache
+      tags: ["apache"]
 
 #  roles:
 #    - setup_apache
@@ -37,6 +38,8 @@
       uri:
         url: http://mgroothues.training.hilling.de
       register: apache_uri_result
+      tags: ["test-apache"]
     - name: show variable
       debug:
         var: training_apache_packages
+      tags: ["test-apache"]
