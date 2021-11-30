@@ -14,13 +14,13 @@
       debug:
         var: training_apache_packages
 
-#  tasks:
-#    - name: role install apache
-#      import_role:
-#        name: roles/setup_apache
+  tasks:
+    - name: role install apache
+      import_role:
+        name: roles/setup_apache
 
-  roles:
-    - setup_apache
+#  roles:
+#    - setup_apache
 
   post_tasks:
     - name: show variable post
