@@ -18,6 +18,7 @@ jobs:
       matrix:
         distro:
           - ubuntu2004
+          - ubuntu1404
           - debian10
 
     steps:
