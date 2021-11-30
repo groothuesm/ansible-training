@@ -1,6 +1,6 @@
 ---
 - name: Install Apache
-  hosts: training
+  hosts: akittelmann
   become: true
   gather_facts: true
   vars:
@@ -34,7 +34,7 @@
   tasks:
     - name: test apache
       uri:
-        url: http://ghilling.training.hilling.de
+        url: http://akittelmann.training.hilling.de
       register: apache_uri_result
     - name: show variable
       debug:
