@@ -12,7 +12,7 @@
     training_apache_packages:
       - apache2
       - apache2-utils
-  notify: check_apache_status
+#  notify: check_apache_status
 
 - name: show variable tasks
   debug:
