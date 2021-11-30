@@ -1,10 +1,10 @@
 ---
-- name: check_apache_status
-  file:
-    path: /tmp/mgroothues.txt
-    state: absent
-  register: res_service_status
+#- name: check_apache_status
+#  file:
+#    path: /tmp/mgroothues.txt
+#    state: absent
+#  register: res_service_status
 
 - name: show apache status
   debug:
-    var: res_service_status
+    msg: handler-executed
