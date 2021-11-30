@@ -20,7 +20,7 @@
 #        name: roles/setup_apache
 
   roles:
-    - setup/apache
+    - setup_apache
 
   post_tasks:
     - name: show variable post
