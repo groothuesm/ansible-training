@@ -15,9 +15,9 @@
         var: training_apache_packages
 
   roles:
-    - name: install apache
-      import_role: roles/setup_apache
-
+    - name: role install apache
+      import_role:
+        name: roles/setup_apache
 
   post_tasks:
     - name: show variable post
