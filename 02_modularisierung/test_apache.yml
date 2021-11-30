@@ -1,0 +1,8 @@
+---
+- name: test apache
+  uri:
+    url: http://akittelmann.training.hilling.de
+  register: apache_uri_result
+- name: show variable
+  debug:
+    var: training_apache_packages
