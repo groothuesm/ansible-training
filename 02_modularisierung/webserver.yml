@@ -1,13 +1,22 @@
 ---
-- name: Install Apache
-  hosts: akittelmann
-  become: true
-  gather_facts: true
+- name: Remove Apache
+  hosts: localhost
+  become: false
+  gather_facts: false
   vars:
     training_apache_packages:
       - apache2
       - apache2-utils
       - apache2-doc
+
+  tasks:
+    - name: remove apache
+      import_tasks: remove_apache.yml
+
+- name: Install Apache
+  hosts: akittelmann
+  become: true
+  gather_facts: true
 
   pre_tasks:
     - name: show variable pre
@@ -19,7 +28,6 @@
   tasks:
     - name: install apache (play)
       import_tasks: install_apache.yml
-
 
   post_tasks:
     - name: show variable post
