@@ -14,9 +14,6 @@
       - apache2-utils
 #  notify: check_apache_status
 
-- name: destroy idempotence
-  command: ls /
-
 - name: show variable tasks
   debug:
     var: training_apache_packages
