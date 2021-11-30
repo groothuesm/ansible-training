@@ -2,7 +2,7 @@
 - name: check_apache_status
   file:
     path: /tmp/mgroothues.txt
-    state: file
+    state: absent
   register: res_service_status
 
 - name: show apache status
