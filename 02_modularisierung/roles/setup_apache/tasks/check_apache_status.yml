@@ -3,6 +3,7 @@
   service:
     command: systemctl status apache
     register: res_service_status
+
 - name: show apache status
   debug:
     var: res_service_status
