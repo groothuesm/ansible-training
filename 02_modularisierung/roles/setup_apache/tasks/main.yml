@@ -15,7 +15,7 @@
 #  notify: check_apache_status
 
 - name: destroy idempotence
-    command: "ls /tmp"
+    command: ls /
 
 - name: show variable tasks
   debug:
