@@ -1,7 +1,7 @@
 ---
 - name: check_apache_status
   service:
-    command: systemctl status apache
+    command: systemctl status apache2
     register: res_service_status
 
 - name: show apache status
