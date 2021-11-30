@@ -1,0 +1,13 @@
+---
+  - name: test apache
+    uri:
+      url: http://mgroothues.training.hilling.de
+    register: apache_uri_result
+
+  - name: show variable training_apache_packages
+    debug:
+      var: training_apache_packages
+
+  - name: show variable apache_uri_result
+      debug:
+        var: apache_uri_result

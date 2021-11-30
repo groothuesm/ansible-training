@@ -15,7 +15,7 @@
         var: training_apache_packages
 
   tasks:
-    - name: role install apache
+    - name: role setup_apache
       import_role:
         name: roles/setup_apache
       tags: ["apache"]
@@ -34,12 +34,8 @@
   gather_facts: false
 
   tasks:
-    - name: test apache
-      uri:
-        url: http://mgroothues.training.hilling.de
-      register: apache_uri_result
+    - name: role test_apache
+      import_role:
+        name: roles/test_apache
       tags: ["test-apache"]
-    - name: show variable
-      debug:
-        var: training_apache_packages
-      tags: ["test-apache"]
+
